@@ -2285,7 +2285,7 @@ nav .list li a {
 
 .contact-section{
     background: #ffffff;
-    padding: 60px 0 80px;
+    padding: 140px 0 80px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     overflow: hidden;
@@ -2304,6 +2304,50 @@ nav .list li a {
     font-size: 28px;
     color: #292020;
     margin-bottom: 24px;
+}
+
+.contact-info-block{
+    max-width: 900px;
+}
+
+.contact-info-title{
+    color: #292020;
+    font-size: 28px;
+    margin: 24px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info-title:first-child{
+    margin-top: 0;
+}
+
+.contact-info-title::before{
+    content: "";
+    width: 4px;
+    height: 22px;
+    border-radius: 999px;
+    background: #7fa18c;
+}
+
+.contact-info-value{
+    font-size: 22px;
+    color: #292020;
+    margin: 0 0 8px;
+}
+
+.contact-info-value a{
+    color: #3d5d83;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(61, 93, 131, 0.3);
+}
+
+.contact-info-value a:hover{
+    color: #2b4e77;
+    border-bottom-color: rgba(43, 78, 119, 0.6);
 }
 
 .contact-form{
