@@ -261,18 +261,18 @@
 
 .home-page .introduction .button_home {
     width: 220px;
-    min-height: 96px;
+    min-height: auto;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
     padding: 16px;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    background: rgba(255, 255, 255, 0.72);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     color: #292020;
@@ -284,7 +284,7 @@
     transition: all 0.3s ease;
     text-decoration: none;
     text-align: left;
-    margin: 0 16px 0 0;
+    margin-right: 16px;
 }
 
 .home-page .introduction .button_home:last-of-type{
@@ -304,19 +304,17 @@
 }
 
 .home-page .introduction .button_home:hover {
-    background: rgba(255, 255, 255, 0.92);
-    border-color: rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.85);
     color: #292020;
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
     transform: translateY(-4px);
 }
 
 .button_home .see-more {
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    opacity: 0.75;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.7;
     display: inline-block;
     padding-bottom: 1px;
     width: fit-content;
@@ -2402,97 +2400,31 @@ nav .list li a {
     border-color: #889E73;
 }
 
-@media (min-width:769px) and (max-width:1024px) {
-    nav {
-        padding: 10px 20px;
-    }
-
-    #logo,
-    .home-page #logo {
-        height: 62px;
-        width: 62px;
-        margin-left: 0;
-    }
-
-    .logo-text {
-        font-size: 11px;
-        margin-left: 8px;
-    }
-
-    .home-page .list,
-    .about-page .list,
-    .projects-page .list,
-    .contact-page .list {
-        margin-left: auto;
-        margin-right: 8px;
-    }
-
-    .home-page .hero,
-    .about-hero,
-    .projects-hero,
-    .contact-hero {
-        padding: 170px 32px 60px;
-    }
-
-    .home-page .home-content {
-        padding: 100px 32px 80px;
-    }
-
-    .home-page .introduction .button_home{
-        width: 220px;
-        padding: 15px;
-    }
-
-    .projects-page .introduction {
-        margin-left: 32px;
-        margin-right: 32px;
-    }
-
-    .contact-inner {
-        margin-left: 32px;
-        margin-right: 32px;
-    }
-
-    .footer {
-        padding: 70px 32px 44px;
-    }
-
-    .footer::before {
-        left: 32px;
-        right: 32px;
-    }
-}
-
 
 @media (max-width:768px) {
 
-    #logo,
-    .home-page #logo{
-        height: 42px;
-        width: 42px;
+    #logo{
+        height: 50px;
+        width: 50px;
     }
 
     nav{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        flex-direction: column;
         align-items: center;
         height: auto;
-        padding: 8px 12px;
-        gap: 6px;
+        padding: 12px 16px 16px;
+        gap: 8px;
         position: relative;
     }
 
     nav .nav-toggle {
         display: inline-flex;
-        position: static;
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
         margin: 0;
-        margin-left: auto;
-        transform: none;
-        width: 38px;
-        height: 38px;
-        padding: 6px;
-        flex-shrink: 0;
+        align-self: auto;
     }
 
     nav #logo,
@@ -2501,28 +2433,22 @@ nav .list li a {
     }
 
     nav .logo-text{
-        display: inline-block;
-        width: auto;
-        text-align: left;
-        margin: 0;
-        font-size: 10px;
-        letter-spacing: 0.14em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 2px auto 0;
         transform: none;
         align-self: center;
-        max-width: 62%;
     }
 
     nav .list {
         display: none;
         width: 100%;
-        order: 3;
-        flex-basis: 100%;
         margin-left: 0;
         flex-direction: column;
-        align-items: stretch;
-        gap: 6px;
-        padding: 8px;
-        margin-top: 6px;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 0;
         background: #ffffff;
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -2558,116 +2484,62 @@ nav .list li a {
     }
 
     nav.nav-open #active a {
-        color: #292020;
-    }
-
-    nav .list #active::before{
-        display: none;
-    }
-
-    nav .list #active{
-        font-weight: 700;
+        color: #A94A4A;
     }
 
 
     #active, #none-active {
-        margin: 2px 0;
-        padding: 8px 10px;
+        margin: 10px 0;
+        padding: 10px;
     }
 
     .introduction {
-        margin: 30px 16px;
+        margin: 40px 20px;
         text-align: center;
     }
 
     .introduction h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .introduction h2 {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .introduction h3 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .home-page .hero{
         min-height: 100vh;
         height: auto;
-        padding: 92px 16px 34px;
+        padding: 130px 20px 50px;
         align-items: flex-start;
-    }
-
-    .home-page .hero::before{
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.62) 62%, rgba(255, 255, 255, 0.25) 100%);
     }
 
     .home-page #page_content .introduction{
         margin: 0;
         width: 100%;
         height: auto;
-        text-align: left;
+        text-align: center;
     }
 
     .home-page .introduction h1{
-        font-size: 34px;
-        line-height: 1.14;
+        font-size: 42px;
+        line-height: 1.1;
     }
 
     .home-page .introduction p{
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-    .home-page .introduction .intro-quote{
-        margin-left: 0;
-        margin-top: 10px;
-        font-size: 15px;
-    }
-
-    .home-page .home-content{
-        margin-top: -20px;
-        padding: 62px 16px 48px;
-        border-top-left-radius: 22px;
-        border-top-right-radius: 22px;
-    }
-
-    .home-page #page_content .home-content h2{
-        font-size: 34px;
-    }
-
-    .home-page #page_content .home-content .cont .homepage_projects{
-        margin-top: 40px;
-        gap: 18px;
-    }
-
-    .home-page #page_content .home-content .cont .home-category{
-        font-size: 22px;
-    }
-
-    .home-page #page_content .home-content .cont .home-project-grid .home-project-card{
-        min-height: auto;
-        padding: 14px;
-    }
-
-    .home-page #page_content .home-content .cont .home-project-image{
-        height: 210px;
+        font-size: 17px;
     }
 
     .home-page .introduction .button_home{
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        margin: 0 0 12px;
-        padding: 14px;
-        font-size: 16px;
-        border-radius: 16px;
-        min-height: 92px;
+        width: min(320px, 100%);
+        margin: 0 auto 12px;
     }
 
     .home-page .introduction .button_home:last-of-type{
-        margin-right: 0;
+        margin-right: auto;
         margin-bottom: 0;
     }
 
@@ -2693,23 +2565,11 @@ nav .list li a {
     }
 
     .about-hero{
-        margin: 0;
-        padding: 92px 16px 34px;
-        min-height: auto;
-        background-image:
-            linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.62) 62%, rgba(255, 255, 255, 0.25) 100%),
-            url('images/Background_05.png');
+        margin: 140px 20px 0;
     }
 
     .about-hero h1{
-        font-size: 34px;
-    }
-
-    .about-lead{
-        margin-left: 0;
-        padding-left: 14px;
-        font-size: 15px;
-        line-height: 1.55;
+        font-size: 40px;
     }
 
     .about-metrics{
@@ -2749,16 +2609,16 @@ nav .list li a {
     }
 
     .projects-page .introduction {
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .projects-page .introduction .projects-section-title{
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .projects-page .introduction #project-container{
-        margin-top: 32px;
+        margin-top: 44px;
     }
 
     .projects-page .introduction #project-container .project-item{
@@ -2768,7 +2628,7 @@ nav .list li a {
 
     .projects-page .introduction #project-container .project-item .project_picture{
         max-width: 100%;
-        height: 220px;
+        height: 280px;
     }
 
     .projects-page .introduction #project-container .project-item .project_description{
@@ -2776,19 +2636,12 @@ nav .list li a {
     }
 
     .projects-hero{
-        padding: 92px 16px 34px;
-        background-image:
-            linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.62) 62%, rgba(255, 255, 255, 0.25) 100%),
-            url('images/backgroundProject.png');
-    }
-
-    .projects-hero h1{
-        font-size: 34px;
+        padding: 140px 20px 50px;
     }
 
     .projects-section{
-        margin-top: 20px;
-        padding: 32px 0 44px;
+        margin-top: 28px;
+        padding: 40px 0 60px;
     }
 
     .projects-metrics{
@@ -2800,43 +2653,16 @@ nav .list li a {
     }
 
     .contact-hero{
-        padding: 92px 16px 34px;
-        background-image:
-            linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.62) 62%, rgba(255, 255, 255, 0.25) 100%),
-            url('images/Background_04.png');
-    }
-
-    .contact-hero h1{
-        font-size: 34px;
-    }
-
-    .contact-lead{
-        margin-left: 0;
-        padding-left: 14px;
-        font-size: 15px;
-        line-height: 1.55;
-    }
-
-    .contact-section{
-        padding: 58px 0 42px;
+        padding: 140px 20px 50px;
     }
 
     .contact-inner{
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-
-    .contact-info-title{
-        font-size: 20px;
-    }
-
-    .contact-info-value{
-        font-size: 16px;
-        word-break: break-word;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .footer{
-        padding: 46px 16px 34px;
+        padding: 60px 20px 40px;
         grid-template-columns: 1fr;
         justify-items: center;
     }
@@ -2855,8 +2681,8 @@ nav .list li a {
     }
 
     .footer::before{
-        left: 16px;
-        right: 16px;
+        left: 20px;
+        right: 20px;
     }
 
     .footer img{
@@ -2866,8 +2692,8 @@ nav .list li a {
     .footer .footer-content{
         width: 100%;
         max-width: 680px;
-        padding: 18px;
-        gap: 18px;
+        padding: 24px;
+        gap: 24px;
         flex-wrap: wrap;
     }
 
@@ -2886,9 +2712,3 @@ nav .list li a {
     padding-left: 28px;
     padding-top: 32px;
 }
-
-
-
-
-
-
