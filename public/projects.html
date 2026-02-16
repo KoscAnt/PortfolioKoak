@@ -1,261 +1,38 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Antonia Koscak</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../style.css">
-    </head>
-    <body class="projects-page">
-    
-        <header>
-            <nav>
-                <img src="../images/logo_01.png" alt="logo" id="logo">
-                <span class="logo-text">Antonia Ko&scaron;&ccaron;ak</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Projects — Antonia Koscak</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../style.css">
+</head>
 
-                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-                    <span class="nav-toggle-bar"></span>
-                    <span class="nav-toggle-bar"></span>
-                    <span class="nav-toggle-bar"></span>
-                </button>
+<body class="projects-page">
 
-                <ul class="list" id="primary-nav">
-                    <li id="none-active"><a href="../index.html">Home</a></li>
-                    <li id="none-active"><a href="./about.html">About</a></li>
-                    <li id="active"><a href="./projects.html">Projects</a></li>
-                    <li id="none-active"><a href="./contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
+<header>
+<nav>
+<img src="../images/logo_01.png" id="logo">
+<span class="logo-text">Antonia Ko&scaron;&ccaron;ak</span>
 
-        <div class="projects-hero">
-            <p class="projects-eyebrow">Projects</p>
-            <h1>Selected work & <br> experiments.</h1>
-            <p class="projects-lead">
-                A curated selection of design and digital projects, from visual concepts to interactive builds.
-            </p>
-            <div class="projects-metrics">
-                <div class="metric-card">
-                    <span class="metric-value">5+</span>
-                    <span class="metric-label">Projects</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-value">10+</span>
-                    <span class="metric-label">Tools</span>
-                </div>
-            </div>
-        </div>
+<ul class="list">
+<li><a href="../index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li id="active"><a href="projects.html">Projects</a></li>
+<li><a href="contacts.html">Contacts</a></li>
+</ul>
+</nav>
+</header>
 
-        <div class="projects-section" id="projects-section">
-            <div class="introduction">
-                <div class="projects-section-intro">
-                    <p class="projects-section-eyebrow">Overview</p>
-                    <h2 class="projects-section-title">Explore selected projects</h2>
-                    <p class="projects-section-lead">Use categories and tools to filter the work below and quickly find the projects you want to review.</p>
-                </div>
+<div class="projects-hero">
+<h1>Selected work & experiments</h1>
+</div>
 
-                <div class="project-navigation">
-                    <ul class="list">
-                        <li><button class="filter-button is-active" data-filter="all">all</button></li>
-                        <li><button class="filter-button" data-filter="design">design</button></li>
-                        <li><button class="filter-button" data-filter="programming">programming</button></li>
-                    </ul>
-                </div>
+<div id="project-container"></div>
 
-                <div class="project-tools">
-                    <span class="tools-label">Tools:</span>
-                    <label class="tool-option" data-tool="figma"><input type="checkbox" value="figma">Figma</label>
-                    <label class="tool-option" data-tool="vs-studio-code"><input type="checkbox" value="vs-studio-code">VS Code</label>
-                    <label class="tool-option" data-tool="visual-studio"><input type="checkbox" value="visual-studio">Visual Studio</label>
-                    <label class="tool-option" data-tool="github"><input type="checkbox" value="github">GitHub</label>
-                    <label class="tool-option" data-tool="codex"><input type="checkbox" value="codex">Codex</label>
-                    <label class="tool-option" data-tool="adobe-photoshop"><input type="checkbox" value="adobe-photoshop">Adobe Photoshop</label>
-                </div>
+<div class="footer">
+<p class="rights">&copy; 2026 Antonia Ko&scaron;&ccaron;ak</p>
+</div>
 
-                <div id="project-container">
-
-                <div class="project-item" data-project="100-prisoners-problem" data-category="programming" data-tools="vs-studio-code visual-studio github codex" data-skills="Algorithm design, Frontend development, UI implementation" data-images="../images/100prisoner.jpg" data-github-cpp="https://github.com/KoscAnt/100-prisoners-problem-simulator" data-github="https://github.com/KoscAnt/PrisonerProblemApp" data-website="https://koscant.github.io/PrisonerProblemApp/" data-modal-subtitle="From C++ strategy simulator to web app" data-modal-details="I independently built a C++ simulator of the 100 prisoners problem using the optimal cycle-following strategy, showing how the success rate is around 31 percent instead of near-zero random guessing. The project includes custom simulation modes, chain tracking, and repeated statistical runs. After that, with Codex support, I created a more intuitive web version in JavaScript, HTML, and CSS. In this modal, you can also scroll through the project image preview.">
-
-                    <img class="project_picture" src="../images/prisoner.png" alt="100 prisoners problem preview">
-
-                    <div class="project_description">
-
-                        <h2 class="name_of_project"><img class="project-title-logo" src="../images/gamelogo.png" alt="100 prisoners problem logo">100 prisoners&nbsp;problem</h2>
-                        <p class="project-meta">Category: Programming &middot; Tools: VS Code, Visual Studio, GitHub, Codex</p>
-                        <h3 class="description_of_project">100 Prisoners Problem</h3>
-                        <p>This project explores the classic 100 prisoners problem through a practical, easy-to-follow simulation. It explains the cycle-following strategy, compares it with random guessing, and shows why the mathematically optimal approach reaches about a 31% group success rate. The project was first built as a standalone C++ algorithm simulator, then expanded into a web version to make the concept more intuitive, visual, and accessible.</p>
-                        <button class="see-more-button">See more</button>
-                        
-                    </div>
-
-                </div>
-
-                <div class="project-item" data-project="t-hub" data-category="design" data-tools="figma adobe-photoshop" data-skills="UX research, Wireframing, Visual design" data-images="../images/thub.png">
-
-                    <img class="project_picture" src="../images/projectthub.png" alt="project_01">
-
-                    <div class="project_description">
-
-                        <h2 class="name_of_project"><img class="project-title-logo project-title-logo--large" src="../images/thublogo.png" alt="T-hub logo">T-hub</h2>
-                        <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                        <h3 class="description_of_project">A Community Hub for Collaboration and Events</h3>
-                        <p> T-hub is a concept for a platform that connects people, teams, and events in one place. It helps users 
-                            discover gatherings, share updates, and collaborate around shared interests with a clear, friendly interface.</p>
-                        <button class="see-more-button">See more</button>
-                        
-                    </div>
-
-                </div>
-
-                <div class="project-item" data-project="grass" data-category="design" data-tools="figma adobe-photoshop" data-skills="UX research, Wireframing, Prototyping, Visual design" data-images="../images/grass.jpg">
-
-                    <img class="project_picture" src="../images/heading1.png" alt="Project heading preview">
-
-                    <div class="project_description">
-
-                        <h2 class="name_of_project"><img class="project-title-logo" src="../images/grassLogo.png" alt="Grass logo">.grass</h2>
-                        <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                        <h3 class="description_of_project">Mobile App & Website for E-Waste</h3>
-                        <p>.grass is a concept project design for a mobile and web platform focused on repairing old and outdated technology, managing electronic waste responsibly, and selling recycled and refurbished devices. It highlights e-waste reduction and encourages a healthier digital balance through clear, accessible user flows.</p>
-                        <button class="see-more-button">See more</button>
-
-                    </div>
-               
-
-                </div>
-
-                <div class="project-item" data-project="includeme" data-category="design" data-tools="figma adobe-photoshop" data-skills="User flows, UX writing, Visual design" data-images="../images/includeme.jpg">
-
-                    <img class="project_picture" src="../images/projectinclude.png" alt="IncludeMe project preview">
-
-                    <div class="project_description">
-
-                        <h2 class="name_of_project"><img class="project-title-logo" src="../images/includelogo.png" alt="IncludeMe logo">IncludeMe</h2>
-                        <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                        <h3 class="description_of_project">A Social App for Real-Life Meetups and Community Activities</h3>
-                        <p> IncludeMe is a mobile application that connects users through real-life social interactions such 
-                            as book clubs, meetups, seminars, or casual walks. The app encourages community building by allowing 
-                            users to share their plans and invite others to join. Whether it&rsquo;s a group activity or simply a solo
-                            walk someone wants company for, IncludeMe fosters genuine human connection in an increasingly digital world.</p>
-                        <button class="see-more-button">See more</button>
-                        
-                    </div>
-
-                </div>
-
-                <div class="project-item" data-project="veo-bank" data-category="design" data-tools="figma adobe-photoshop" data-skills="UX research, Branding, UI design" data-images="../images/veobank.png">
-
-                    <img class="project_picture" src="../images/projectveo.png" alt="project_01">
-
-                    <div class="project_description">
-
-                        <h2 class="name_of_project"><img class="project-title-logo" src="../images/veologo.png" alt="Veo bank logo">Veo bank</h2>
-                        <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                        <h3 class="description_of_project">A Digital Banking Experience for Everyday Money</h3>
-                        <p> Veo bank is a concept for a clean, approachable banking app that helps users track spending, 
-                            set savings goals, and manage cards with clarity. The interface focuses on quick insights and 
-                            frictionless daily actions.</p>
-                        <button class="see-more-button">See more</button>
-                        
-                    </div>
-
-                </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-
-            <div class="footer-brand">
-                <div class="footer-brand-row">
-                    <img src="../images/logo_01.png" alt="logo">
-                    <span class="footer-name">Antonia Ko&scaron;&ccaron;ak</span>
-                </div>
-                <p class="footer-blurb">A multidisciplinary digital creative working across design &amp; technology.</p>
-            </div>
-
-            <div class="footer-content">
-
-                    <div class="footer-column">
-        <h3>About</h3>
-        <a href="./about.html#education">Education</a>
-        <a href="./about.html#experience">Experience</a>
-        <a href="./about.html#skills">Skills</a>
-
-    </div>
-
-    <div class="footer-column">
-        <h3>Projects</h3>
-        <a href="./projects.html?filter=design">Design</a>
-        <a href="./projects.html?filter=programming">Programming</a>
-    </div>
-
-    <div class="footer-column footer-column--contacts">
-        <h3>Contacts</h3>
-        <a href="./contacts.html#contact-form">Email</a>
-        <a href="https://www.behance.net/antoniakoak2" target="_blank" rel="noopener">Behance</a>
-        <a href="https://github.com/KoscAnt" target="_blank" rel="noopener">GitHub</a>
-    </div>
-                
-  </div>
-                        <p class="rights">&copy; 2026 Antonia Ko&#353;&#269;ak. All rights reserved.</p>
-        </div>
-        
-        <div class="project-modal" aria-hidden="true">
-            <div class="project-modal-content">
-                <button class="project-modal-back" aria-label="Back">&larr;</button>
-                <div class="project-modal-gallery" aria-label="Project gallery"></div>
-                <div class="project-modal-text">
-                    <h2 class="project-modal-title"></h2>
-                    <p class="project-modal-meta">
-                        <span class="project-modal-category"></span>
-                    </p>
-                    <div class="project-modal-section">
-                        <h4>Skills</h4>
-                        <div class="project-modal-tags" data-kind="skills"></div>
-                    </div>
-                    <div class="project-modal-section">
-                        <h4>Tools</h4>
-                        <div class="project-modal-tags" data-kind="tools"></div>
-                    </div>
-                    <a class="project-modal-github project-modal-github-cpp" href="#" target="_blank" rel="noopener">
-                        <svg class="project-modal-github-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.9-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.74-.1-.27-.45-1.31.1-2.74 0 0 .84-.27 2.75 1.04a9.2 9.2 0 0 1 5 0c1.91-1.31 2.75-1.04 2.75-1.04.55 1.43.2 2.47.1 2.74.64.71 1.03 1.62 1.03 2.74 0 3.92-2.34 4.79-4.57 5.04.36.32.68.95.68 1.92 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
-                        </svg>
-                        See C++ Code
-                    </a>
-                    <a class="project-modal-github project-modal-github-web" href="#" target="_blank" rel="noopener">
-                        <svg class="project-modal-github-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.9-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.74-.1-.27-.45-1.31.1-2.74 0 0 .84-.27 2.75 1.04a9.2 9.2 0 0 1 5 0c1.91-1.31 2.75-1.04 2.75-1.04.55 1.43.2 2.47.1 2.74.64.71 1.03 1.62 1.03 2.74 0 3.92-2.34 4.79-4.57 5.04.36.32.68.95.68 1.92 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
-                        </svg>
-                        See Web Code
-                    </a>
-                    <a class="project-modal-website" href="#" target="_blank" rel="noopener">
-                        <svg class="project-modal-website-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm7.73 9h-3.1a15.7 15.7 0 0 0-1.27-5.03A8.02 8.02 0 0 1 19.73 11zM12 4.07c.9 1.16 1.62 3 1.97 5.93H10.03C10.38 7.07 11.1 5.23 12 4.07zM6.64 5.97A15.7 15.7 0 0 0 5.37 11h-3.1a8.02 8.02 0 0 1 4.37-5.03zM2.27 13h3.1c.2 1.88.73 3.62 1.27 5.03A8.02 8.02 0 0 1 2.27 13zM12 19.93c-.9-1.16-1.62-3-1.97-5.93h3.94c-.35 2.93-1.07 4.77-1.97 5.93zM15.36 18.03c.54-1.41 1.07-3.15 1.27-5.03h3.1a8.02 8.02 0 0 1-4.37 5.03z"/>
-                        </svg>
-                        See Website
-                    </a>
-                    <h3 class="project-modal-subtitle"></h3>
-                    <p class="project-modal-details"></p>
-                    <p class="project-modal-note">This self-initiated concept project was created independently as part of my UX/UI design portfolio.</p>
-                </div>
-            </div>
-        </div>
-
-        <script src="../script.js" async defer></script>
-    </body>
+<script src="../script.js"></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
