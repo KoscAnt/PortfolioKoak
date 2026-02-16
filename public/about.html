@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>About — Antonia Koscak</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Antonia Koscak — About</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -12,25 +14,203 @@
 <header>
 <nav>
 <img src="../images/logo_01.png" alt="logo" id="logo">
-<span class="logo-text">Antonia Ko&scaron;&ccaron;ak</span>
+<span class="logo-text">Antonia Košćak</span>
 
-<ul class="list">
-<li><a href="../index.html">Home</a></li>
-<li id="active"><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contacts.html">Contacts</a></li>
+<button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+<span class="nav-toggle-bar"></span>
+<span class="nav-toggle-bar"></span>
+<span class="nav-toggle-bar"></span>
+</button>
+
+<ul class="list" id="primary-nav">
+<li id="none-active"><a href="../index.html">Home</a></li>
+<li id="active"><a href="./about.html">About</a></li>
+<li id="none-active"><a href="./projects.html">Projects</a></li>
+<li id="none-active"><a href="./contacts.html">Contacts</a></li>
 </ul>
 </nav>
 </header>
 
+
 <div class="about-hero">
-<h1>Designing visual stories across digital spaces.</h1>
+
+<p class="about-eyebrow">About</p>
+
+<h1>Designing visual stories<br>across digital spaces.</h1>
+
+<p class="about-lead">
+I work across graphic design, digital marketing, and interactive media.
+Combining visual communication with structured thinking to create clear,
+engaging experiences.
+</p>
+
+<div class="about-metrics">
+
+<div class="metric-card">
+<span class="metric-value">1+</span>
+<span class="metric-label">Year Building</span>
 </div>
+
+<div class="metric-card">
+<span class="metric-value">5+</span>
+<span class="metric-label">Projects</span>
+</div>
+
+<div class="metric-card">
+<span class="metric-value">10+</span>
+<span class="metric-label">Tools</span>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="about-section">
+
+<div class="about-section-intro">
+<p class="about-section-eyebrow">Background</p>
+<h2 class="about-section-title">Education & Experience overview</h2>
+<p class="about-section-lead">
+A quick look at what I studied, built, and how I work across design,
+marketing, and web.
+</p>
+</div>
+
+
+<div class="about-grid about-grid--details">
+
+<div class="about-card wide">
+<span id="education" class="section-anchor"></span>
+<h2>Education</h2>
+
+<p><strong>B.Eng Computer Science</strong> — Međimurje University of Applied Science (2024–present)</p>
+<p>Programming, algorithms, data structures, databases, probability, statistics.</p>
+
+<p><strong>B.Eng Graphic Technology & Media</strong> — University North (2020–2024)</p>
+<p>Visual communication, branding, typography, multimedia, digital production.</p>
+</div>
+
+
+<div class="about-card wide">
+<span id="experience" class="section-anchor"></span>
+<h2>Experience</h2>
+
+<p><strong>Marketing / Design Assistant</strong> — Tria d.o.o.</p>
+<p>Visual materials, social content, newsletters, campaign metrics.</p>
+
+<p><strong>UI/UX Intern</strong> — Northwest Agency</p>
+<p>UX process, wireframing, prototyping in Figma.</p>
+</div>
+
+
+<div class="about-card">
+<span id="skills" class="section-anchor"></span>
+<h2>Skills</h2>
+<ul class="about-list">
+<li>UX research & wireframing</li>
+<li>UI & visual systems</li>
+<li>Design thinking</li>
+<li>Marketing communication</li>
+</ul>
+</div>
+
+
+<div class="about-card">
+<h2>Tools</h2>
+<ul class="about-list">
+<li>Figma, FigJam</li>
+<li>Adobe Illustrator / Photoshop</li>
+<li>Maya</li>
+<li>VS Code / Visual Studio</li>
+<li>GitHub</li>
+</ul>
+</div>
+
+
+<div class="about-card">
+<h2>Programming</h2>
+<ul class="about-stack">
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>C++</li>
+<li>C#</li>
+<li>SQL</li>
+</ul>
+</div>
+
+
+<div class="about-card">
+<h2>Links</h2>
+
+<p>
+GitHub:
+<a href="https://github.com/KoscAnt" target="_blank">
+github.com/KoscAnt
+</a>
+</p>
+
+<p>
+Behance:
+<a href="https://www.behance.net/antoniakoak2" target="_blank">
+behance.net/antoniakoak2
+</a>
+</p>
+
+</div>
+
+</div>
+</div>
+
+
 
 <div class="footer">
-<p class="rights">&copy; 2026 Antonia Ko&scaron;&ccaron;ak</p>
+
+<div class="footer-brand">
+<div class="footer-brand-row">
+<img src="../images/logo_01.png" alt="logo">
+<span class="footer-name">Antonia Košćak</span>
 </div>
 
+<p class="footer-blurb">
+A multidisciplinary digital creative working across design & technology.
+</p>
+</div>
+
+
+<div class="footer-content">
+
+<div class="footer-column">
+<h3>About</h3>
+<a href="./about.html#education">Education</a>
+<a href="./about.html#experience">Experience</a>
+<a href="./about.html#skills">Skills</a>
+</div>
+
+<div class="footer-column">
+<h3>Projects</h3>
+<a href="./projects.html?filter=design">Design</a>
+<a href="./projects.html?filter=programming">Programming</a>
+</div>
+
+<div class="footer-column">
+<h3>Contacts</h3>
+<a href="./contacts.html">Email</a>
+<a href="https://github.com/KoscAnt">GitHub</a>
+<a href="https://www.behance.net/antoniakoak2">Behance</a>
+</div>
+
+</div>
+
+<p class="rights">
+© 2026 Antonia Košćak. All rights reserved.
+</p>
+
+</div>
+
+
 <script src="../script.js"></script>
+
 </body>
 </html>
