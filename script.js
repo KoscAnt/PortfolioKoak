@@ -1,4 +1,4 @@
-const accordions = document.querySelectorAll(".accordion");
+﻿const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach(accordion => {
     accordion.addEventListener("click", () => {
@@ -117,16 +117,22 @@ if (filterButtons.length) {
 const projectModal = document.querySelector(".project-modal");
 if (projectModal && projectItems.length) {
     const modalGallery = projectModal.querySelector(".project-modal-gallery");
+    const modalContent = projectModal.querySelector(".project-modal-content");
+    const modalText = projectModal.querySelector(".project-modal-text");
     const modalTitle = projectModal.querySelector(".project-modal-title");
-    const modalSubtitle = projectModal.querySelector(".project-modal-subtitle");
-    const modalDetails = projectModal.querySelector(".project-modal-details");
     const modalCategory = projectModal.querySelector(".project-modal-category");
     const modalSkills = projectModal.querySelector(".project-modal-tags[data-kind=\"skills\"]");
     const modalTools = projectModal.querySelector(".project-modal-tags[data-kind=\"tools\"]");
+    const modalLinksSection = projectModal.querySelector(".project-modal-links-section");
+    const modalFigma = projectModal.querySelector(".project-modal-figma");
     const modalGithubCpp = projectModal.querySelector(".project-modal-github-cpp");
     const modalGithub = projectModal.querySelector(".project-modal-github-web");
     const modalWebsite = projectModal.querySelector(".project-modal-website");
+    const modalTabs = Array.from(projectModal.querySelectorAll(".project-modal-tab"));
+    const modalPanels = Array.from(projectModal.querySelectorAll(".project-modal-panel"));
     const modalBack = projectModal.querySelector(".project-modal-back");
+    const modalNote = projectModal.querySelector(".project-modal-note");
+    let modalRevealObserver = null;
 
     const clearNode = (node) => {
         if (!node) return;
@@ -140,16 +146,103 @@ if (projectModal && projectItems.length) {
         return tag;
     };
 
+    const getFieldIcon = (key) => {
+        const icons = {
+            "short-description": '<i class="bi bi-card-text project-overview-icon" aria-hidden="true"></i>',
+            "project-type": '<i class="bi bi-window project-overview-icon" aria-hidden="true"></i>',
+            "domain": '<i class="bi bi-globe2 project-overview-icon" aria-hidden="true"></i>',
+            "format": '<i class="bi bi-phone project-overview-icon" aria-hidden="true"></i>',
+            "key-features": '<i class="bi bi-stars project-overview-icon" aria-hidden="true"></i>',
+            "purpose": '<i class="bi bi-bullseye project-overview-icon" aria-hidden="true"></i>',
+            "user-value": '<i class="bi bi-person-check project-overview-icon" aria-hidden="true"></i>',
+            "technical-objective": '<i class="bi bi-cpu project-overview-icon" aria-hidden="true"></i>',
+            "design-objective": '<i class="bi bi-palette2 project-overview-icon" aria-hidden="true"></i>',
+            "result": '<i class="bi bi-kanban project-overview-icon" aria-hidden="true"></i>',
+            "my-role": '<i class="bi bi-person-badge project-overview-icon" aria-hidden="true"></i>'
+        };
+
+        return icons[key] || '<i class="bi bi-circle project-overview-icon" aria-hidden="true"></i>';
+    };
+
+    const animateModalContent = () => {
+        const targets = Array.from(projectModal.querySelectorAll(
+            ".project-modal-back, .project-modal-title, .project-modal-section, .project-modal-tabs, .project-modal-panels, .project-modal-note, .project-modal-panel.is-active, .project-overview-block, .project-overview-list li"
+        ));
+        if (!targets.length) return;
+
+        if (modalRevealObserver) {
+            modalRevealObserver.disconnect();
+            modalRevealObserver = null;
+        }
+
+        targets.forEach(el => {
+            el.classList.remove("is-visible");
+            el.classList.add("project-modal-animate");
+        });
+
+        targets.forEach((el, index) => {
+            const delay = Math.min(index * 45, 360);
+            setTimeout(() => {
+                el.classList.add("is-visible");
+            }, delay);
+        });
+    };
+
+    const setActiveTab = (targetTab) => {
+        if (!targetTab) return;
+        modalTabs.forEach(tab => {
+            const isActive = tab.dataset.tab === targetTab;
+            tab.classList.toggle("is-active", isActive);
+            tab.setAttribute("aria-selected", String(isActive));
+        });
+
+        modalPanels.forEach(panel => {
+            const isActive = panel.dataset.panel === targetTab;
+            panel.classList.toggle("is-active", isActive);
+            panel.hidden = !isActive;
+        });
+
+        if (modalGallery) {
+            const showGallery = false;
+            modalGallery.classList.toggle("is-hidden", !showGallery);
+        }
+
+        if (modalNote) {
+            const showNote = targetTab === "role";
+            modalNote.classList.toggle("is-hidden", !showNote);
+        }
+
+    };
+
+    if (modalTabs.length && modalPanels.length) {
+        modalTabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                setActiveTab(tab.dataset.tab || "overview");
+            });
+        });
+    }
+
     const openModal = (item) => {
         const image = item.querySelector(".project_picture");
         const title = item.querySelector(".name_of_project");
-        const subtitle = item.querySelector(".description_of_project");
         const details = item.querySelector(".project_description p:not(.project-meta)");
-        const modalSubtitleText = (item.getAttribute("data-modal-subtitle") || "").trim();
-        const modalDetailsText = (item.getAttribute("data-modal-details") || "").trim();
         const category = item.getAttribute("data-category") || "";
         const skills = (item.getAttribute("data-skills") || "").split(",");
         const tools = (item.getAttribute("data-tools") || "").split(" ");
+        const overview = (item.getAttribute("data-overview") || "").trim();
+        const overviewShort = (item.getAttribute("data-overview-short") || "").trim();
+        const overviewType = (item.getAttribute("data-overview-type") || "").trim();
+        const overviewDomain = (item.getAttribute("data-overview-domain") || "").trim();
+        const overviewFormat = (item.getAttribute("data-overview-format") || "").trim();
+        const overviewFeatures = (item.getAttribute("data-overview-features") || "").trim();
+        const goal = (item.getAttribute("data-goal") || "").trim();
+        const goalPurpose = (item.getAttribute("data-goal-purpose") || "").trim();
+        const goalUserValue = (item.getAttribute("data-goal-user-value") || "").trim();
+        const goalTechnical = (item.getAttribute("data-goal-technical") || "").trim();
+        const goalDesign = (item.getAttribute("data-goal-design") || "").trim();
+        const built = (item.getAttribute("data-built") || "").trim();
+        const role = (item.getAttribute("data-role") || "").trim();
+        const figma = (item.getAttribute("data-figma") || "").trim();
         const githubCpp = (item.getAttribute("data-github-cpp") || "").trim();
         const github = (item.getAttribute("data-github") || "").trim();
         const website = (item.getAttribute("data-website") || "").trim();
@@ -160,16 +253,10 @@ if (projectModal && projectItems.length) {
 
         if (modalGallery) {
             clearNode(modalGallery);
-            const sources = images.length ? images : (image ? [image.src] : []);
-            modalGallery.classList.toggle("project-modal-gallery--single", sources.length === 1);
-            sources.forEach((src, index) => {
-                const img = document.createElement("img");
-                img.src = src;
-                img.alt = title ? `${title.textContent.trim()} image ${index + 1}` : "Project image";
-                img.loading = "lazy";
-                modalGallery.appendChild(img);
-            });
+            modalGallery.classList.add("is-hidden");
         }
+        if (modalText) modalText.classList.remove("has-header-image");
+        if (modalContent) modalContent.classList.remove("has-header-image");
         if (modalTitle && title) {
             modalTitle.textContent = "";
             const sourceLogo = title.querySelector("img");
@@ -181,14 +268,8 @@ if (projectModal && projectItems.length) {
             }
             modalTitle.appendChild(document.createTextNode(title.textContent.trim()));
         }
-        if (modalSubtitle) {
-            modalSubtitle.textContent = modalSubtitleText || (subtitle ? subtitle.textContent.trim() : "");
-        }
-        if (modalDetails) {
-            modalDetails.textContent = modalDetailsText || (details ? details.textContent.trim() : "");
-        }
         if (modalCategory) {
-            modalCategory.textContent = category ? `Category: ${category}` : "";
+            modalCategory.textContent = category || "";
         }
         if (modalSkills) {
             clearNode(modalSkills);
@@ -199,6 +280,15 @@ if (projectModal && projectItems.length) {
             tools
                 .filter(Boolean)
                 .forEach(tool => modalTools.appendChild(makeTag(toolDisplayNames[tool] || tool)));
+        }
+        if (modalFigma) {
+            if (figma) {
+                modalFigma.href = figma;
+                modalFigma.style.display = "inline-flex";
+            } else {
+                modalFigma.removeAttribute("href");
+                modalFigma.style.display = "none";
+            }
         }
         if (modalGithubCpp) {
             if (githubCpp) {
@@ -227,16 +317,111 @@ if (projectModal && projectItems.length) {
                 modalWebsite.style.display = "none";
             }
         }
+        if (modalLinksSection) {
+            const hasLinks = Boolean(figma || githubCpp || github || website);
+            modalLinksSection.style.display = hasLinks ? "block" : "none";
+        }
+
+        const overviewText = overview || (details ? details.textContent.trim() : "");
+        const overviewFields = [
+            { key: "short-description", label: "Short Description", value: overviewShort || overviewText },
+            { key: "project-type", label: "Project Type", value: overviewType || "Concept project" },
+            { key: "domain", label: "Domain", value: overviewDomain || "Digital product" },
+            { key: "format", label: "Format", value: overviewFormat || "Web and mobile" },
+            { key: "key-features", label: "Key Features", value: overviewFeatures || overviewText }
+        ];
+        const panelCopy = {
+            overview: overviewText,
+            goal: goal || overviewText,
+            built: built || overviewText,
+            role: role || "I created this project independently."
+        };
+        modalPanels.forEach(panel => {
+            const key = panel.dataset.panel || "overview";
+            if (key === "overview") {
+                panel.innerHTML = overviewFields
+                    .map(field => {
+                        if (field.label === "Key Features") {
+                            const items = (field.value || "")
+                                .split(/[;,]/)
+                                .map(item => item.trim())
+                                .filter(Boolean)
+                                .map(item => `<li>${item}</li>`)
+                                .join("");
+
+                            return `
+                                <div class="project-overview-block">
+                                    <h5 class="project-overview-label">${getFieldIcon(field.key)} ${field.label}</h5>
+                                    <ul class="project-overview-list">${items}</ul>
+                                </div>
+                            `;
+                        }
+
+                        return `
+                            <div class="project-overview-block">
+                                <h5 class="project-overview-label">${getFieldIcon(field.key)} ${field.label}</h5>
+                                <p class="project-overview-text">${field.value}</p>
+                            </div>
+                        `;
+                    })
+                    .join("");
+            } else if (key === "goal") {
+                const goalText = panelCopy.goal || overviewText;
+                const goalFields = [
+                    { key: "purpose", label: "Purpose", value: goalPurpose || goalText },
+                    { key: "user-value", label: "User Value", value: goalUserValue || "To provide a clear and useful experience for end users." },
+                    { key: "technical-objective", label: "Technical Objective", value: goalTechnical || "To implement a stable solution aligned with project requirements." },
+                    { key: "design-objective", label: "Design Objective", value: goalDesign || "To ensure the interface is clear, structured, and easy to use." }
+                ];
+
+                panel.innerHTML = goalFields
+                    .map(field => `
+                        <div class="project-overview-block">
+                            <h5 class="project-overview-label">${getFieldIcon(field.key)} ${field.label}</h5>
+                            <p class="project-overview-text">${field.value}</p>
+                        </div>
+                    `)
+                    .join("");
+            } else if (key === "built") {
+                const resultImageSrc = images.length ? images[0] : (image ? image.src : "");
+                const resultImageAlt = title ? `${title.textContent.trim()} result image` : "Project result image";
+
+                panel.innerHTML = `
+                    ${resultImageSrc ? `<img class="project-result-image" src="${resultImageSrc}" alt="${resultImageAlt}" loading="lazy">` : ""}
+                `;
+            } else {
+                const panelText = panelCopy.role || overviewText;
+                panel.innerHTML = `
+                    <div class="project-overview-block">
+                        <h5 class="project-overview-label">${getFieldIcon("my-role")} My Role</h5>
+                        <p class="project-overview-text">${panelText}</p>
+                    </div>
+                `;
+            }
+        });
+
+        if (modalNote) {
+            modalNote.textContent = "This self-initiated concept project was created independently as part of my portfolio.";
+        }
+        setActiveTab("overview");
 
         projectModal.classList.add("is-open");
         projectModal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
+        animateModalContent();
     };
 
     const closeModal = () => {
         projectModal.classList.remove("is-open");
         projectModal.setAttribute("aria-hidden", "true");
         document.body.style.overflow = "";
+        if (modalRevealObserver) {
+            modalRevealObserver.disconnect();
+            modalRevealObserver = null;
+        }
+        projectModal.querySelectorAll(".project-modal-animate").forEach(el => {
+            el.classList.remove("project-modal-animate", "is-visible");
+        });
     };
 
     projectItems.forEach(item => {
@@ -426,3 +611,4 @@ if (hoverVideos.length) {
         });
     });
 }
+
