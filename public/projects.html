@@ -9,8 +9,9 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
+
     <body class="projects-page">
-    
+
         <header>
             <nav>
                 <img src="../images/logo_01.png" alt="logo" id="logo">
@@ -31,53 +32,135 @@
             </nav>
         </header>
 
+
         <div class="projects-hero">
+
             <p class="projects-eyebrow">Projects</p>
-            <h1>Selected work & <br> experiments.</h1>
+
+            <h1>
+                Selected work & <br> experiments.
+            </h1>
+
             <p class="projects-lead">
                 A curated selection of design and digital projects, from visual concepts to interactive builds.
             </p>
+
             <div class="projects-metrics">
+
                 <div class="metric-card">
-                    <span class="metric-value">5+</span>
+                    <span class="metric-value">6+</span>
                     <span class="metric-label">Projects</span>
                 </div>
+
                 <div class="metric-card">
                     <span class="metric-value">10+</span>
                     <span class="metric-label">Tools</span>
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="projects-section" id="projects-section">
+
             <div class="introduction">
+
                 <div class="projects-section-intro">
-                    <p class="projects-section-eyebrow">Overview</p>
-                    <h2 class="projects-section-title">Explore selected projects</h2>
-                    <p class="projects-section-lead">Use categories & tools to filter the work below and quickly find the projects you want to review.</p>
+
+                    <p class="projects-section-eyebrow">
+                        Overview
+                    </p>
+
+                    <h2 class="projects-section-title">
+                        Explore selected projects
+                    </h2>
+
+                    <p class="projects-section-lead">
+                        Use categories & tools to filter the work below and quickly find the projects you want to review.
+                    </p>
+
                 </div>
+
 
                 <div class="project-navigation">
+
                     <ul class="list">
-                        <li><button class="filter-button is-active" data-filter="all">all</button></li>
-                        <li><button class="filter-button" data-filter="design">design</button></li>
-                        <li><button class="filter-button" data-filter="programming">programming</button></li>
+
+                        <li>
+                            <button class="filter-button is-active" data-filter="all">
+                                all
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="filter-button" data-filter="design">
+                                design
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="filter-button" data-filter="programming">
+                                programming
+                            </button>
+                        </li>
+
                     </ul>
+
                 </div>
+
 
                 <div class="project-tools">
-                    <span class="tools-label">Tools:</span>
-                    <label class="tool-option" data-tool="figma"><input type="checkbox" value="figma">Figma</label>
-                    <label class="tool-option" data-tool="vs-studio-code"><input type="checkbox" value="vs-studio-code">VS Code</label>
-                    <label class="tool-option" data-tool="visual-studio"><input type="checkbox" value="visual-studio">Visual Studio</label>
-                    <label class="tool-option" data-tool="heidisql"><input type="checkbox" value="heidisql">HeidiSQL</label>
-                    <label class="tool-option" data-tool="xampp"><input type="checkbox" value="xampp">XAMPP</label>
-                    <label class="tool-option" data-tool="github"><input type="checkbox" value="github">GitHub</label>
-                    <label class="tool-option" data-tool="codex"><input type="checkbox" value="codex">Codex</label>
-                    <label class="tool-option" data-tool="adobe-photoshop"><input type="checkbox" value="adobe-photoshop">Adobe Photoshop</label>
+
+                    <span class="tools-label">
+                        Tools:
+                    </span>
+
+                    <label class="tool-option" data-tool="figma">
+                        <input type="checkbox" value="figma">
+                        Figma
+                    </label>
+
+                    <label class="tool-option" data-tool="vs-studio-code">
+                        <input type="checkbox" value="vs-studio-code">
+                        VS Code
+                    </label>
+
+                    <label class="tool-option" data-tool="visual-studio">
+                        <input type="checkbox" value="visual-studio">
+                        Visual Studio
+                    </label>
+
+                    <label class="tool-option" data-tool="heidisql">
+                        <input type="checkbox" value="heidisql">
+                        HeidiSQL
+                    </label>
+
+                    <label class="tool-option" data-tool="xampp">
+                        <input type="checkbox" value="xampp">
+                        XAMPP
+                    </label>
+
+                    <label class="tool-option" data-tool="github">
+                        <input type="checkbox" value="github">
+                        GitHub
+                    </label>
+
+                    <label class="tool-option" data-tool="codex">
+                        <input type="checkbox" value="codex">
+                        Codex
+                    </label>
+
+                    <label class="tool-option" data-tool="adobe-photoshop">
+                        <input type="checkbox" value="adobe-photoshop">
+                        Adobe Photoshop
+                    </label>
+
                 </div>
 
+
                 <div id="project-container">
+
 
                     <div class="project-item"
                          data-project="finn"
@@ -85,21 +168,42 @@
                          data-tools="visual-studio heidisql xampp codex"
                          data-skills="Backend development, Web application development, Database design, Authentication & authorization, Data analytics"
                          data-images="../images/finn.png"
-                         data-overview="FINN is a financial management web application designed for managing personal and business finances. The application allows users to record income and expenses, manage financial categories, create budgets, analyze financial data, and generate financial reports."
-                         data-overview-short="A financial management web application for tracking income and expenses, managing budgets, analyzing financial data, and generating financial reports."
-                         data-overview-type="Financial management web application"
-                         data-overview-domain="Personal and business finance"
-                         data-overview-format="ASP.NET Core MVC web application"
-                         data-overview-features="personal and business accounts; user registration and login; income and expense management; financial categories; monthly and yearly budgets; analytics with interactive charts; filtering by period, category, and date; PDF financial reports; user-specific financial data"
-                         data-goal="Create a structured financial management application that allows users to record, organize, analyze, and report their personal or business financial data."
-                         data-goal-purpose="To provide users with a centralized application for managing income, expenses, budgets, financial categories, analytics, and financial reports."
-                         data-goal-user-value="To give users a clear overview of their financial situation and allow them to monitor spending, income, expenses, budgets, and overall balance."
-                         data-goal-technical="To develop a database-driven web application using ASP.NET Core MVC and C#, with Entity Framework Core connecting the application to a MariaDB/MySQL relational database."
-                         data-goal-design="To organize financial information into clear sections for transactions, categories, budgets, analytics, and reports so users can easily understand and manage their finances."
-                         data-built="The basic application structure and core architecture were independently developed as part of the Programming Tools in Programming course at university. I then expanded and refined the application with AI assistance using Codex. The application was developed using ASP.NET Core MVC and C#. Financial data is stored in a MariaDB/MySQL relational database, with Entity Framework Core used for database communication and data management. HeidiSQL and XAMPP were used as part of the database development and local development environment. The application includes authentication and authorization, financial management features, analytics with charts, and PDF report generation."
-                         data-role="I independently developed the basic application structure and core architecture as part of the Programming Tools in Programming university course. I was responsible for establishing the main application structure, database concept, and core functionality. I then used AI assistance through Codex to expand, improve, and refine the application, including additional functionality, interface improvements, analytics, and reporting features.">
 
-                        <img class="project_picture" src="../images/finn.png" alt="FINN financial management application preview">
+                         data-overview="FINN is a financial management web application designed for managing personal and business finances. The application allows users to record income and expenses, manage financial categories, create budgets, analyze financial data, and generate financial reports."
+
+                         data-overview-short="A financial management web application for tracking income and expenses, managing budgets, analyzing financial data, and generating financial reports."
+
+                         data-overview-type="Financial management web application"
+
+                         data-overview-domain="Personal and business finance"
+
+                         data-overview-format="ASP.NET Core MVC web application"
+
+                         data-overview-features="personal and business accounts; user registration and login; income and expense management; financial categories; monthly and yearly budgets; analytics with interactive charts; filtering by period, category, and date; PDF financial reports; user-specific financial data"
+
+                         data-goal="Create a structured financial management application that allows users to record, organize, analyze, and report their personal or business financial data."
+
+                         data-goal-purpose="To provide users with a centralized application for managing income, expenses, budgets, financial categories, analytics, and financial reports."
+
+                         data-goal-user-value="To give users a clear overview of their financial situation and allow them to monitor spending, income, expenses, budgets, and overall balance."
+
+                         data-goal-technical="To develop a database-driven web application using ASP.NET Core MVC and C#, with Entity Framework Core connecting the application to a MariaDB/MySQL relational database."
+
+                         data-goal-design="To organize financial information into clear sections for transactions, categories, budgets, analytics, and reports so users can easily understand and manage their finances."
+
+                         data-built="The basic application structure and core architecture were independently developed as part of the Programming Tools in Programming course at university. I then expanded and refined the application with AI assistance using Codex. The application was developed using ASP.NET Core MVC and C#. Financial data is stored in a MariaDB/MySQL relational database, with Entity Framework Core used for database communication and data management. HeidiSQL and XAMPP were used as part of the database development and local development environment. The application includes authentication and authorization, financial management features, analytics with charts, and PDF report generation."
+
+                         data-role="I independently developed the basic application structure and core architecture as part of the Programming Tools in Programming university course. I was responsible for establishing the main application structure, database concept, and core functionality. I then used AI assistance through Codex to expand, improve, and refine the application, including additional functionality, interface improvements, analytics, and reporting features."
+
+                         data-video="../videos/finn-demo.mp4"
+
+                         data-pdf="../pdf/finn-financial-report.pdf">
+
+
+                        <img class="project_picture"
+                             src="../images/finn.png"
+                             alt="FINN financial management application preview">
+
 
                         <div class="project_description">
 
@@ -108,7 +212,8 @@
                             </h2>
 
                             <p class="project-meta">
-                                Category: Programming &middot; Tools: Visual Studio, HeidiSQL, XAMPP, Codex
+                                Category: Programming &middot;
+                                Tools: Visual Studio, HeidiSQL, XAMPP, Codex
                             </p>
 
                             <h3 class="description_of_project">
@@ -121,132 +226,440 @@
                                 or yearly budgets, and analyze their financial data through interactive charts and summaries.
                             </p>
 
-                            <button class="see-more-button">See more</button>
+                            <button class="see-more-button">
+                                See more
+                            </button>
 
                         </div>
 
                     </div>
 
-                    <div class="project-item" data-project="100-prisoners-problem" data-category="programming" data-tools="vs-studio-code visual-studio github codex" data-skills="Algorithm design, Frontend development, UI implementation" data-images="../images/100prisoner.jpg" data-github-cpp="https://github.com/KoscAnt/100-prisoners-problem-simulator" data-github="https://github.com/KoscAnt/PrisonerProblemApp" data-website="https://koscant.github.io/PrisonerProblemApp/" data-overview="A practical simulation of the 100 prisoners problem that explains why the cycle-following strategy gives much better results than random guessing." data-overview-short="This project is an interactive web simulator of the 100 Prisoners Problem, a well-known probability and algorithm strategy puzzle. It translates the original C++ simulation logic into a visual, user-interactive web application so users can explore the strategy through manual and automated runs. The focus was on making an abstract algorithm understandable through interface and interaction design." data-overview-type="Interactive algorithm and strategy simulator" data-overview-domain="Probability, algorithms, and educational visualization" data-overview-format="Interactive responsive web application" data-overview-features="manual simulation mode with box-by-box interaction; automated simulation runs (1-100 trials); statistical mode with 10,000 total runs; dynamic matrix and permutation generation; live output logs and simulation summaries; multiple scenario sizes (4-100 prisoners)" data-goal="Show the strategy logic in a clear way and make the probability outcome understandable through both algorithmic and visual presentation." data-goal-purpose="To transform a theoretical probability and algorithm strategy problem into an interactive and understandable digital experience." data-goal-user-value="To allow users to explore and test the prisoner strategy visually through simulation modes instead of only reading theoretical explanations." data-goal-technical="To implement and validate the simulation logic across multiple runs and scenario sizes, and translate an existing C++ algorithm into an interactive web-based environment." data-goal-design="To design a clear, structured interface that makes complex simulation steps easy to follow through visual feedback, logs, and interactive controls." data-built="I fully built the original C++ algorithm and simulator myself. I then created the web/frontend version and website with Codex assistance, using JavaScript, HTML, and CSS." data-role="I independently owned and implemented the full C++ strategy logic and simulation behavior. For the web version, I built and integrated the frontend with Codex assistance.">
 
-                        <img class="project_picture" src="../images/prisoner.png" alt="100 prisoners problem preview">
+                    <div class="project-item"
+                         data-project="100-prisoners-problem"
+                         data-category="programming"
+                         data-tools="vs-studio-code visual-studio github codex"
+                         data-skills="Algorithm design, Frontend development, UI implementation"
+                         data-images="../images/100prisoner.jpg"
+                         data-github-cpp="https://github.com/KoscAnt/100-prisoners-problem-simulator"
+                         data-github="https://github.com/KoscAnt/PrisonerProblemApp"
+                         data-website="https://koscant.github.io/PrisonerProblemApp/"
+
+                         data-overview="A practical simulation of the 100 prisoners problem that explains why the cycle-following strategy gives much better results than random guessing."
+
+                         data-overview-short="This project is an interactive web simulator of the 100 Prisoners Problem, a well-known probability and algorithm strategy puzzle. It translates the original C++ simulation logic into a visual, user-interactive web application so users can explore the strategy through manual and automated runs. The focus was on making an abstract algorithm understandable through interface and interaction design."
+
+                         data-overview-type="Interactive algorithm and strategy simulator"
+
+                         data-overview-domain="Probability, algorithms, and educational visualization"
+
+                         data-overview-format="Interactive responsive web application"
+
+                         data-overview-features="manual simulation mode with box-by-box interaction; automated simulation runs (1-100 trials); statistical mode with 10,000 total runs; dynamic matrix and permutation generation; live output logs and simulation summaries; multiple scenario sizes (4-100 prisoners)"
+
+                         data-goal="Show the strategy logic in a clear way and make the probability outcome understandable through both algorithmic and visual presentation."
+
+                         data-goal-purpose="To transform a theoretical probability and algorithm strategy problem into an interactive and understandable digital experience."
+
+                         data-goal-user-value="To allow users to explore and test the prisoner strategy visually through simulation modes instead of only reading theoretical explanations."
+
+                         data-goal-technical="To implement and validate the simulation logic across multiple runs and scenario sizes, and translate an existing C++ algorithm into an interactive web-based environment."
+
+                         data-goal-design="To design a clear, structured interface that makes complex simulation steps easy to follow through visual feedback, logs, and interactive controls."
+
+                         data-built="I fully built the original C++ algorithm and simulator myself. I then created the web/frontend version and website with Codex assistance, using JavaScript, HTML, and CSS."
+
+                         data-role="I independently owned and implemented the full C++ strategy logic and simulation behavior. For the web version, I built and integrated the frontend with Codex assistance.">
+
+
+                        <img class="project_picture"
+                             src="../images/prisoner.png"
+                             alt="100 prisoners problem preview">
+
 
                         <div class="project_description">
 
-                            <h2 class="name_of_project"><img class="project-title-logo" src="../images/gamelogo.png" alt="100 prisoners problem logo">100 prisoners&nbsp;problem</h2>
-                            <p class="project-meta">Category: Programming &middot; Tools: VS Code, Visual Studio, GitHub, Codex</p>
-                            <h3 class="description_of_project">100 Prisoners Problem</h3>
-                            <p>This project explores the classic 100 prisoners problem through a practical, easy-to-follow simulation. It explains the cycle-following strategy, compares it with random guessing, and shows why the mathematically optimal approach reaches about a 31% group success rate. The original C++ algorithm and simulator were fully built by me, and the later web/frontend version (website) was developed with Codex assistance to make the concept more intuitive, visual, and accessible.</p>
-                            <button class="see-more-button">See more</button>
+                            <h2 class="name_of_project">
+                                <img class="project-title-logo"
+                                     src="../images/gamelogo.png"
+                                     alt="100 prisoners problem logo">
+                                100 prisoners&nbsp;problem
+                            </h2>
+
+                            <p class="project-meta">
+                                Category: Programming &middot;
+                                Tools: VS Code, Visual Studio, GitHub, Codex
+                            </p>
+
+                            <h3 class="description_of_project">
+                                100 Prisoners Problem
+                            </h3>
+
+                            <p>
+                                This project explores the classic 100 prisoners problem through a practical,
+                                easy-to-follow simulation. It explains the cycle-following strategy, compares it
+                                with random guessing, and shows why the mathematically optimal approach reaches
+                                about a 31% group success rate. The original C++ algorithm and simulator were fully
+                                built by me, and the later web/frontend version (website) was developed with Codex
+                                assistance to make the concept more intuitive, visual, and accessible.
+                            </p>
+
+                            <button class="see-more-button">
+                                See more
+                            </button>
 
                         </div>
 
                     </div>
 
-                    <div class="project-item" data-project="t-hub" data-category="design" data-tools="figma adobe-photoshop" data-skills="UX research, Wireframing, Visual design" data-images="../images/thub.png" data-overview="T-hub is a concept platform focused on connecting communities, teams, and events in one clear digital space." data-overview-short="A community web app concept for discovering events, sharing updates, and collaborating around shared interests." data-overview-type="UX/UI concept project" data-overview-domain="Community and events" data-overview-format="Web app concept" data-overview-features="Event discovery, user collaboration flows, clear navigation, visual consistency" data-goal="Design an interface that helps users discover activities quickly, understand context fast, and collaborate with less friction." data-built="I created user flows, low-fidelity and high-fidelity wireframes, and visual screens that support event discovery and social interaction." data-role="I handled the concept direction, UX structure, and visual design execution from first layout ideas to final UI screens.">
 
-                        <img class="project_picture" src="../images/projectthub.png" alt="project_01">
+                    <div class="project-item"
+                         data-project="t-hub"
+                         data-category="design"
+                         data-tools="figma adobe-photoshop"
+                         data-skills="UX research, Wireframing, Visual design"
+                         data-images="../images/thub.png"
+
+                         data-overview="T-hub is a concept platform focused on connecting communities, teams, and events in one clear digital space."
+
+                         data-overview-short="A community web app concept for discovering events, sharing updates, and collaborating around shared interests."
+
+                         data-overview-type="UX/UI concept project"
+
+                         data-overview-domain="Community and events"
+
+                         data-overview-format="Web app concept"
+
+                         data-overview-features="Event discovery, user collaboration flows, clear navigation, visual consistency"
+
+                         data-goal="Design an interface that helps users discover activities quickly, understand context fast, and collaborate with less friction."
+
+                         data-built="I created user flows, low-fidelity and high-fidelity wireframes, and visual screens that support event discovery and social interaction."
+
+                         data-role="I handled the concept direction, UX structure, and visual design execution from first layout ideas to final UI screens.">
+
+
+                        <img class="project_picture"
+                             src="../images/projectthub.png"
+                             alt="project_01">
+
 
                         <div class="project_description">
 
-                            <h2 class="name_of_project"><img class="project-title-logo project-title-logo--large" src="../images/thublogo.png" alt="T-hub logo">T-hub</h2>
-                            <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                            <h3 class="description_of_project">A Community Hub for Collaboration and Events</h3>
-                            <p>T-hub is a concept for a platform that connects people, teams, and events in one place. It helps users discover gatherings, share updates, and collaborate around shared interests with a clear, friendly interface.</p>
-                            <button class="see-more-button">See more</button>
+                            <h2 class="name_of_project">
+                                <img class="project-title-logo project-title-logo--large"
+                                     src="../images/thublogo.png"
+                                     alt="T-hub logo">
+                                T-hub
+                            </h2>
+
+                            <p class="project-meta">
+                                Category: Design &middot;
+                                Tools: Figma, Adobe Photoshop
+                            </p>
+
+                            <h3 class="description_of_project">
+                                A Community Hub for Collaboration and Events
+                            </h3>
+
+                            <p>
+                                T-hub is a concept for a platform that connects people, teams, and events in one place.
+                                It helps users discover gatherings, share updates, and collaborate around shared interests
+                                with a clear, friendly interface.
+                            </p>
+
+                            <button class="see-more-button">
+                                See more
+                            </button>
 
                         </div>
 
                     </div>
 
-                    <div class="project-item" data-project="grass" data-category="design" data-tools="figma adobe-photoshop" data-skills="UX research, Wireframing, Prototyping, Visual design" data-images="../images/grass.jpg" data-overview=".grass is a mobile and web concept for reducing e-waste through repair, refurbishment, and responsible device lifecycle management." data-overview-short="A sustainability-focused product concept that supports device repair, recycling, and responsible tech usage." data-overview-type="UX/UI concept project" data-overview-domain="Sustainability and e-waste" data-overview-format="Mobile and web design concept" data-overview-features="Repair flows, recycling journeys, user education touchpoints, cross-platform UI" data-goal="Create an accessible user experience that encourages repair behavior and makes sustainable tech decisions feel practical and simple." data-built="I built the product concept, interaction flows, wireframes, and final UI directions for both mobile and web views." data-role="I led research framing, UX flow planning, interface design, and visual consistency across all key screens.">
 
-                        <img class="project_picture" src="../images/heading1.png" alt="Project heading preview">
+                    <div class="project-item"
+                         data-project="grass"
+                         data-category="design"
+                         data-tools="figma adobe-photoshop"
+                         data-skills="UX research, Wireframing, Prototyping, Visual design"
+                         data-images="../images/grass.jpg"
+
+                         data-overview=".grass is a mobile and web concept for reducing e-waste through repair, refurbishment, and responsible device lifecycle management."
+
+                         data-overview-short="A sustainability-focused product concept that supports device repair, recycling, and responsible tech usage."
+
+                         data-overview-type="UX/UI concept project"
+
+                         data-overview-domain="Sustainability and e-waste"
+
+                         data-overview-format="Mobile and web design concept"
+
+                         data-overview-features="Repair flows, recycling journeys, user education touchpoints, cross-platform UI"
+
+                         data-goal="Create an accessible user experience that encourages repair behavior and makes sustainable tech decisions feel practical and simple."
+
+                         data-built="I built the product concept, interaction flows, wireframes, and final UI directions for both mobile and web views."
+
+                         data-role="I led research framing, UX flow planning, interface design, and visual consistency across all key screens.">
+
+
+                        <img class="project_picture"
+                             src="../images/heading1.png"
+                             alt="Project heading preview">
+
 
                         <div class="project_description">
 
-                            <h2 class="name_of_project"><img class="project-title-logo" src="../images/grassLogo.png" alt="Grass logo">.grass</h2>
-                            <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                            <h3 class="description_of_project">Mobile App & Website for E-Waste</h3>
-                            <p>.grass is a concept project design for a mobile and web platform focused on repairing old and outdated technology, managing electronic waste responsibly, and selling recycled and refurbished devices. It highlights e-waste reduction and encourages a healthier digital balance through clear, accessible user flows.</p>
-                            <button class="see-more-button">See more</button>
+                            <h2 class="name_of_project">
+                                <img class="project-title-logo"
+                                     src="../images/grassLogo.png"
+                                     alt="Grass logo">
+                                .grass
+                            </h2>
+
+                            <p class="project-meta">
+                                Category: Design &middot;
+                                Tools: Figma, Adobe Photoshop
+                            </p>
+
+                            <h3 class="description_of_project">
+                                Mobile App & Website for E-Waste
+                            </h3>
+
+                            <p>
+                                .grass is a concept project design for a mobile and web platform focused on repairing
+                                old and outdated technology, managing electronic waste responsibly, and selling recycled
+                                and refurbished devices. It highlights e-waste reduction and encourages a healthier
+                                digital balance through clear, accessible user flows.
+                            </p>
+
+                            <button class="see-more-button">
+                                See more
+                            </button>
 
                         </div>
 
                     </div>
 
-                    <div class="project-item" data-project="includeme" data-category="design" data-tools="figma adobe-photoshop" data-skills="User flows, UX writing, Visual design" data-images="../images/includeme.jpg" data-overview="IncludeMe is a social app concept centered on real-life activities and simple ways to connect with people nearby." data-overview-short="A social concept app designed to help people join real-life activities and build local connections." data-overview-type="UX/UI concept project" data-overview-domain="Social networking and community" data-overview-format="Mobile app concept" data-overview-features="Activity sharing, meetup discovery, user plan posting, inclusive interaction flows" data-goal="Support genuine social interaction by making it easy to share plans, join events, and discover local meetups around shared interests." data-built="I created the key user journeys, content structure, and visual UI concept for posting activities and joining group or solo plans." data-role="I was responsible for experience design, UX writing decisions, and the final visual language of the app concept.">
 
-                        <img class="project_picture" src="../images/projectinclude.png" alt="IncludeMe project preview">
+                    <div class="project-item"
+                         data-project="includeme"
+                         data-category="design"
+                         data-tools="figma adobe-photoshop"
+                         data-skills="User flows, UX writing, Visual design"
+                         data-images="../images/includeme.jpg"
+
+                         data-overview="IncludeMe is a social app concept centered on real-life activities and simple ways to connect with people nearby."
+
+                         data-overview-short="A social concept app designed to help people join real-life activities and build local connections."
+
+                         data-overview-type="UX/UI concept project"
+
+                         data-overview-domain="Social networking and community"
+
+                         data-overview-format="Mobile app concept"
+
+                         data-overview-features="Activity sharing, meetup discovery, user plan posting, inclusive interaction flows"
+
+                         data-goal="Support genuine social interaction by making it easy to share plans, join events, and discover local meetups around shared interests."
+
+                         data-built="I created the key user journeys, content structure, and visual UI concept for posting activities and joining group or solo plans."
+
+                         data-role="I was responsible for experience design, UX writing decisions, and the final visual language of the app concept.">
+
+
+                        <img class="project_picture"
+                             src="../images/projectinclude.png"
+                             alt="IncludeMe project preview">
+
 
                         <div class="project_description">
 
-                            <h2 class="name_of_project"><img class="project-title-logo" src="../images/includelogo.png" alt="IncludeMe logo">IncludeMe</h2>
-                            <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                            <h3 class="description_of_project">A Social App for Real-Life Meetups and Community Activities</h3>
-                            <p>IncludeMe is a mobile application that connects users through real-life social interactions such as book clubs, meetups, seminars, or casual walks. The app encourages community building by allowing users to share their plans and invite others to join. Whether it&rsquo;s a group activity or simply a solo walk someone wants company for, IncludeMe fosters genuine human connection in an increasingly digital world.</p>
-                            <button class="see-more-button">See more</button>
+                            <h2 class="name_of_project">
+                                <img class="project-title-logo"
+                                     src="../images/includelogo.png"
+                                     alt="IncludeMe logo">
+                                IncludeMe
+                            </h2>
+
+                            <p class="project-meta">
+                                Category: Design &middot;
+                                Tools: Figma, Adobe Photoshop
+                            </p>
+
+                            <h3 class="description_of_project">
+                                A Social App for Real-Life Meetups and Community Activities
+                            </h3>
+
+                            <p>
+                                IncludeMe is a mobile application that connects users through real-life social
+                                interactions such as book clubs, meetups, seminars, or casual walks. The app
+                                encourages community building by allowing users to share their plans and invite
+                                others to join. Whether it&rsquo;s a group activity or simply a solo walk someone
+                                wants company for, IncludeMe fosters genuine human connection in an increasingly
+                                digital world.
+                            </p>
+
+                            <button class="see-more-button">
+                                See more
+                            </button>
 
                         </div>
 
                     </div>
 
-                    <div class="project-item" data-project="veo-bank" data-category="design" data-tools="figma adobe-photoshop" data-skills="UX research, Branding, UI design" data-images="../images/veobank.png" data-overview="Veo bank is a concept for a clean digital banking experience focused on daily money visibility and simple account actions." data-overview-short="A bank website concept focused on clarity, quick spending insights, and simple money management actions." data-overview-type="UX/UI concept project" data-overview-domain="Fintech and personal finance" data-overview-format="Bank website concept" data-overview-features="Spending overview, savings goals, card management, clean financial dashboards" data-goal="Design a trustworthy and understandable financial interface where users can track spending, save, and manage cards with confidence." data-built="I developed the app direction, visual identity choices, and core UI screens for accounts, spending insights, and savings management." data-role="I led the project from concept and UX decisions to final UI styling and branding alignment.">
 
-                        <img class="project_picture" src="../images/projectveo.png" alt="project_01">
+                    <div class="project-item"
+                         data-project="veo-bank"
+                         data-category="design"
+                         data-tools="figma adobe-photoshop"
+                         data-skills="UX research, Branding, UI design"
+                         data-images="../images/veobank.png"
+
+                         data-overview="Veo bank is a concept for a clean digital banking experience focused on daily money visibility and simple account actions."
+
+                         data-overview-short="A bank website concept focused on clarity, quick spending insights, and simple money management actions."
+
+                         data-overview-type="UX/UI concept project"
+
+                         data-overview-domain="Fintech and personal finance"
+
+                         data-overview-format="Bank website concept"
+
+                         data-overview-features="Spending overview, savings goals, card management, clean financial dashboards"
+
+                         data-goal="Design a trustworthy and understandable financial interface where users can track spending, save, and manage cards with confidence."
+
+                         data-built="I developed the app direction, visual identity choices, and core UI screens for accounts, spending insights, and savings management."
+
+                         data-role="I led the project from concept and UX decisions to final UI styling and branding alignment.">
+
+
+                        <img class="project_picture"
+                             src="../images/projectveo.png"
+                             alt="project_01">
+
 
                         <div class="project_description">
 
-                            <h2 class="name_of_project"><img class="project-title-logo" src="../images/veologo.png" alt="Veo bank logo">Veo bank</h2>
-                            <p class="project-meta">Category: Design &middot; Tools: Figma, Adobe Photoshop</p>
-                            <h3 class="description_of_project">A Digital Banking Experience for Everyday Money</h3>
-                            <p>Veo bank is a concept for a clean, approachable banking app that helps users track spending, set savings goals, and manage cards with clarity. The interface focuses on quick insights and frictionless daily actions.</p>
-                            <button class="see-more-button">See more</button>
+                            <h2 class="name_of_project">
+                                <img class="project-title-logo"
+                                     src="../images/veologo.png"
+                                     alt="Veo bank logo">
+                                Veo bank
+                            </h2>
+
+                            <p class="project-meta">
+                                Category: Design &middot;
+                                Tools: Figma, Adobe Photoshop
+                            </p>
+
+                            <h3 class="description_of_project">
+                                A Digital Banking Experience for Everyday Money
+                            </h3>
+
+                            <p>
+                                Veo bank is a concept for a clean, approachable banking app that helps users
+                                track spending, set savings goals, and manage cards with clarity. The interface
+                                focuses on quick insights and frictionless daily actions.
+                            </p>
+
+                            <button class="see-more-button">
+                                See more
+                            </button>
 
                         </div>
 
                     </div>
 
                 </div>
+
             </div>
+
         </div>
+
 
         <div class="footer">
 
             <div class="footer-brand">
+
                 <div class="footer-brand-row">
+
                     <img src="../images/logo_01.png" alt="logo">
-                    <span class="footer-name">Antonia Ko&scaron;&ccaron;ak</span>
+
+                    <span class="footer-name">
+                        Antonia Ko&scaron;&ccaron;ak
+                    </span>
+
                 </div>
 
                 <p class="footer-blurb">
                     A multidisciplinary digital creative working across design &amp; technology.
                 </p>
+
             </div>
+
 
             <div class="footer-content">
 
                 <div class="footer-column">
+
                     <h3>About</h3>
-                    <a href="./about.html#education">Education</a>
-                    <a href="./about.html#experience">Experience</a>
-                    <a href="./about.html#skills">Skills</a>
+
+                    <a href="./about.html#education">
+                        Education
+                    </a>
+
+                    <a href="./about.html#experience">
+                        Experience
+                    </a>
+
+                    <a href="./about.html#skills">
+                        Skills
+                    </a>
+
                 </div>
+
 
                 <div class="footer-column">
+
                     <h3>Projects</h3>
-                    <a href="./projects.html?filter=design">Design</a>
-                    <a href="./projects.html?filter=programming">Programming</a>
+
+                    <a href="./projects.html?filter=design">
+                        Design
+                    </a>
+
+                    <a href="./projects.html?filter=programming">
+                        Programming
+                    </a>
+
                 </div>
 
+
                 <div class="footer-column footer-column--contacts">
+
                     <h3>Contacts</h3>
-                    <a href="./contacts.html#contact-form">Email</a>
-                    <a href="https://www.behance.net/antoniakoak2" target="_blank" rel="noopener">Behance</a>
-                    <a href="https://github.com/KoscAnt" target="_blank" rel="noopener">GitHub</a>
+
+                    <a href="./contacts.html#contact-form">
+                        Email
+                    </a>
+
+                    <a href="https://www.behance.net/antoniakoak2"
+                       target="_blank"
+                       rel="noopener">
+                        Behance
+                    </a>
+
+                    <a href="https://github.com/KoscAnt"
+                       target="_blank"
+                       rel="noopener">
+                        GitHub
+                    </a>
+
                 </div>
 
             </div>
+
 
             <p class="rights">
                 &copy; 2026 Antonia Ko&#353;&#269;ak. All rights reserved.
@@ -254,137 +667,6 @@
 
         </div>
 
-        <div class="project-modal" aria-hidden="true">
-            <div class="project-modal-content">
 
-                <button class="project-modal-back" aria-label="Back">
-                    &larr;
-                </button>
-
-                <div class="project-modal-gallery" aria-label="Project gallery"></div>
-
-                <div class="project-modal-text">
-
-                    <h2 class="project-modal-title"></h2>
-
-                    <div class="project-modal-section">
-                        <h4>Category:</h4>
-                        <div class="project-modal-category"></div>
-                    </div>
-
-                    <div class="project-modal-section">
-                        <h4>Skills:</h4>
-                        <div class="project-modal-tags" data-kind="skills"></div>
-                    </div>
-
-                    <div class="project-modal-section">
-                        <h4>Tools:</h4>
-                        <div class="project-modal-tags" data-kind="tools"></div>
-                    </div>
-
-                    <div class="project-modal-section project-modal-links-section">
-                        <h4>Links:</h4>
-
-                        <div class="project-modal-links">
-
-                            <a class="project-modal-website"
-                               href="#"
-                               target="_blank"
-                               rel="noopener">
-                                <i class="bi bi-globe2 project-modal-website-icon" aria-hidden="true"></i>
-                                See Website
-                            </a>
-
-                            <a class="project-modal-figma"
-                               href="#"
-                               target="_blank"
-                               rel="noopener">
-                                <i class="bi bi-bezier2 project-modal-figma-icon" aria-hidden="true"></i>
-                                See Figma File
-                            </a>
-
-                            <a class="project-modal-github project-modal-github-cpp"
-                               href="#"
-                               target="_blank"
-                               rel="noopener">
-                                <i class="bi bi-github project-modal-github-icon" aria-hidden="true"></i>
-                                See C++ Code
-                            </a>
-
-                            <a class="project-modal-github project-modal-github-web"
-                               href="#"
-                               target="_blank"
-                               rel="noopener">
-                                <i class="bi bi-github project-modal-github-icon" aria-hidden="true"></i>
-                                See Web Code
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <div class="project-modal-section project-modal-tabs-section">
-
-                        <div class="project-modal-tabs"
-                             role="tablist"
-                             aria-label="Project details tabs">
-
-                            <button class="project-modal-tab is-active"
-                                    type="button"
-                                    role="tab"
-                                    aria-selected="true"
-                                    data-tab="overview"
-                                    data-label="OVERVIEW">
-                                OVERVIEW
-                            </button>
-
-                            <button class="project-modal-tab"
-                                    type="button"
-                                    role="tab"
-                                    aria-selected="false"
-                                    data-tab="goal"
-                                    data-label="GOAL">
-                                GOAL
-                            </button>
-
-                            <button class="project-modal-tab"
-                                    type="button"
-                                    role="tab"
-                                    aria-selected="false"
-                                    data-tab="built"
-                                    data-label="RESULT">
-                                RESULT
-                            </button>
-
-                            <button class="project-modal-tab"
-                                    type="button"
-                                    role="tab"
-                                    aria-selected="false"
-                                    data-tab="role"
-                                    data-label="MY ROLE">
-                                MY ROLE
-                            </button>
-
-                        </div>
-
-                        <div class="project-modal-panels">
-                            <div class="project-modal-panel is-active" data-panel="overview"></div>
-                            <div class="project-modal-panel" data-panel="goal" hidden></div>
-                            <div class="project-modal-panel" data-panel="built" hidden></div>
-                            <div class="project-modal-panel" data-panel="role" hidden></div>
-                        </div>
-
-                    </div>
-
-                    <p class="project-modal-note">
-                        This self-initiated concept project was created independently as part of my portfolio.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-
-        <script src="../script.js" async defer></script>
-
-    </body>
-</html>
+        <div class="project-modal" aria-hidden=
 ```
