@@ -1012,88 +1012,11 @@
 
 
                     resultPanel.innerHTML = `
-
-                        <div class="finn-result">
-
-                            <div class="finn-result-text">
-
-                                <p>
-                                    The application was expanded with additional functionality
-                                    for financial management, analytics, and reporting.
-                                </p>
-
-                                <p>
-                                    Users can generate a PDF financial report directly from
-                                    the application by pressing the report generation button.
-                                    The generated PDF contains a structured overview of the
-                                    user's financial data.
-                                </p>
-
-                            </div>
-
-
-                            <div class="finn-result-video">
-
-                                <h4>
-                                    Video Demo
-                                </h4>
-
-                                <video controls preload="metadata">
-
-                                    <source src="${videoPath}"
-                                            type="video/mp4">
-
-                                    Your browser does not support the video element.
-
-                                </video>
-
-                            </div>
-
-
-                            <div class="finn-result-pdf">
-
-                                <h4>
-                                    PDF Financial Report
-                                </h4>
-
-                                <p>
-                                    The financial report can be generated directly inside
-                                    the FINN application. After pressing the report generation
-                                    button, the application creates a PDF document containing
-                                    the selected financial information and financial overview.
-                                </p>
-
-
-                                <a class="finn-pdf-button"
-                                   href="${pdfPath}"
-                                   target="_blank"
-                                   rel="noopener">
-
-                                    <i class="bi bi-file-earmark-pdf"
-                                       aria-hidden="true">
-                                    </i>
-
-                                    View PDF Financial Report
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
+                        <img src="../images/finn02.png"
+                             alt="FINN"
+                             style="width:100%; height:auto; display:block;">
                     `;
-                }
 
-
-                document.addEventListener("click", function (event) {
-
-                    const resultTab = event.target.closest(
-                        '.project-modal-tab[data-tab="built"]'
-                    );
-
-                    if (!resultTab) {
-                        return;
-                    }
 
                     setTimeout(updateFinnResult, 100);
 
